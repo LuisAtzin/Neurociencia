@@ -72,7 +72,6 @@ def calcular_td(data, longitud, paso, tiempo_minimo, tiempo_maximo,
             for m in range(ventanas + 1):
                 sumandos = np.where(ensayos_clase == (k - m), 1, 0)
                 suma += np.sum(sumandos)
-            print(suma)
             promedio = (suma) / (len(ensayos_clase))
             tasa_disparo = promedio / longitud
             tasas_disparo[i,j] = tasa_disparo
